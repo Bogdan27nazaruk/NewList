@@ -189,5 +189,16 @@ public class NewList {
         driver.quit();
 
     }
+    @Test
+    public void newlistGdd() {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.google.com/");
+        driver.manage().window().maximize();
+        driver.findElement(By.xpath("//input[@name='q']")).sendKeys("fish\n");
+        Assert.assertTrue(driver.getCurrentUrl().contains("fish"));
+        driver.quit();
+
+    }
 
 }
