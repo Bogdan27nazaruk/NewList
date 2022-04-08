@@ -17,4 +17,15 @@ public class ThirdTest {
         driver.quit();
 
     }
+    @Test
+    public void newlistGp() {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.google.com/");
+        driver.manage().window().maximize();
+        driver.findElement(By.xpath("//input[@name='q']")).sendKeys("puppy\n");
+        Assert.assertTrue(driver.getCurrentUrl().contains("puppy"));
+        driver.quit();
+
+    }
 }
