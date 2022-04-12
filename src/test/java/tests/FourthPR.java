@@ -22,4 +22,5 @@ public class FourthPR {
         Assert.assertTrue(driver.getCurrentUrl().contains("com"));
         driver.quit();
     }
+
 }
