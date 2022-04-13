@@ -1,2 +1,4 @@
-package PageObjects;public class AmazonHomePage {
+package PageObjects;
+
+public class AmazonHomePage {
 }
